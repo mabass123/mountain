@@ -1,0 +1,158 @@
+:root {
+    --main-color: #ff6f3c;
+    --transition: .7s;
+}
+
+body {
+
+    font-family:'segoe ui light' ;
+}
+h1{
+    color: var(--main-color);
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--main-color);
+}
+.nav-item .nav-link:hover{
+    color: var(--main-color);
+}
+/* start banner  */
+.banner{
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.msg span{
+    color: var(--main-color);
+}
+.overlay .msg{ 
+    font-family:'segoe ui light' ;
+    color: aliceblue;
+}
+.overlay .msg p{
+    text-transform: capitalize;
+
+}
+.overlay{
+    background-color: rgba(0, 0, 0, .6);;
+}
+h3{
+    z-index: 1;
+}
+
+h3::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+h3::before{
+    content: "service";
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -60px;
+    top: -21px;
+    font-size: 63px;
+    z-index: -1;
+    color: rgba(0, 0, 0, .2);
+}
+img{
+    height: 400px;
+    
+}
+.service .items{
+    overflow: hidden;
+}
+
+.service .items::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    left: 100%;
+    bottom: 0;
+    transition: var(--transition);
+    /* background-color: black; */
+
+}
+.service .items:hover::after{
+    left: 0;
+}
+.service .items:hover .icon{ 
+    opacity: 1;
+    color: var(--main-color);
+    transition: var(--transition);
+}
+.service .icon{
+    z-index: 1;
+    opacity: 0;
+    transition: var(--transition);
+    color: var(--main-color);
+    
+}
+/* .service .icon:hover{
+    opacity: 10;
+    color: var(--main-color);
+    transition: var(--transition);
+} */
+.country-banner{
+    background-image: url(../img/eg6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+.country-banner::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, .20);
+}
+ /* start navs&tabs */
+ .container .city::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  height: 100%;
+  width: 100%;
+  transition: var(--transition);
+ }
+
+ .container .city:hover.city::after{
+    bottom: 0;
+ }
+ /* starts contacts  */
+ .btn:hover{
+    background-color: aliceblue !important;
+    cursor: pointer;
+    color: black !important;
+ }
+ h4{
+    display: inline;
+ }
+ .contacts .contact-us h4::after{ 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    color: var(--main-color) !important;
+    left: 0;
+    bottom: -4;
+ }
+ .footer span {
+    color: var(--main-color) !important;
+ }
